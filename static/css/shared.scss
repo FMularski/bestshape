@@ -1,6 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import 'colors';
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background: peachpuff;
+    background: $backgroundColor;
+}
+
+.title {
+    font-family: 'Righteous', cursive;
+    color: $theme-color-1;
+    text-shadow: $theme-color-1-dark 3px 3px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 10rem;
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
 }

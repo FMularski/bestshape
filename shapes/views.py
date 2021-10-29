@@ -1,8 +1,6 @@
 from django.shortcuts import render
-from django.views.generic import View
+from django.views.generic import TemplateView
 
 
-class RegisterView(View):
-    def get(self, request):
-        context = {}
-        return render(request, 'shapes/register.html', context)
+class RegisterPageView(TemplateView):
+    template_name = 'shapes/register.html'
