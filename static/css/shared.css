@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&family=Roboto&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -13,13 +13,25 @@
   text-shadow: #01a375 3px 3px;
 }
 
-header {
+.flex-center-center {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-evenly-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -32,5 +44,26 @@ header img {
 
 header h1 {
   font-size: 4rem;
+}
+
+form {
+  width: 30rem;
+  margin: auto;
+  font-family: 'Roboto', sans-serif;
+  color: #01a375;
+  font-size: 1.2rem;
+}
+
+form input {
+  margin-bottom: 1rem;
+}
+
+form button {
+  margin-top: 1rem;
+  width: 40%;
+  color: white !important;
+  background-color: #00FAB4 !important;
+  -webkit-box-shadow: #01a375 3px 3px;
+          box-shadow: #01a375 3px 3px;
 }
 /*# sourceMappingURL=shared.css.map */
