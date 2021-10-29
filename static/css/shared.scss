@@ -27,6 +27,18 @@
     align-items: center;
 }
 
+.spinning {
+    animation: spinning 1s ease infinite;
+}
+
+@keyframes spinning {
+    from {
+        transform: rotateZ(0deg);
+    } to {
+        transform: rotateZ(360deg);
+    }
+}
+
 header {
     
     img {

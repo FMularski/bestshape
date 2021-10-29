@@ -11,7 +11,8 @@
 {% endblock %}
 {% block main %}
     <main>
-        <form>
+        <form id="register-form">
+            {% csrf_token %}
             <h2>Register</h2>
             {% for field in form %}
                 {{field.label}}
@@ -19,8 +20,8 @@
             {% endfor %}
 
             <div class="flex-evenly-center">
-                <button class="btn">Register</button>
-                <button class="btn">Already registered</button>
+                <button id="register-btn" class="btn">Register</button>
+                <button id="already-registered-btn" class="btn">Already registered</button>
             </div>
         </form>
     </main>
@@ -28,4 +29,5 @@
 {% block footer%}{% endblock %}
 
 {% block script %}
+    <script src="{% static '/shapes/js/register.js' %}"></script>
 {% endblock %}

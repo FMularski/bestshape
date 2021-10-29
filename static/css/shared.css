@@ -37,6 +37,33 @@
           align-items: center;
 }
 
+.spinning {
+  -webkit-animation: spinning 1s ease infinite;
+          animation: spinning 1s ease infinite;
+}
+
+@-webkit-keyframes spinning {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+@keyframes spinning {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
 header img {
   width: 10rem;
   padding: 1rem;
