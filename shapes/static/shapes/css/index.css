@@ -99,4 +99,17 @@ div#voting {
 div#voting.active {
   top: 20%;
 }
+
+button.btn-danger {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+}
+
+span#hello {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  font-weight: bold;
+}
 /*# sourceMappingURL=index.css.map */

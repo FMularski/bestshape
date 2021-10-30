@@ -1,7 +1,7 @@
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from shapes.forms import RegisterForm
 from .serializers import UserSerializer
 
@@ -31,4 +31,8 @@ class LoginView(APIView):
         return Response('Invalid credentials', status.HTTP_400_BAD_REQUEST)
 
 
+class LogoutView(APIView):
+    def post(self, request):
+        logout(request)
+        return Response(status.HTTP_200_OK)
 
