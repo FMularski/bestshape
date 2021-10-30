@@ -3,7 +3,8 @@ from rest_framework.views import APIView
 from rest_framework import status
 from django.contrib.auth import authenticate, login, logout
 from shapes.forms import RegisterForm
-from .serializers import UserSerializer
+from shapes.models import Shape
+from .serializers import UserSerializer, ShapeSerializer
 
 
 class RegisterView(APIView):
@@ -35,4 +36,11 @@ class LogoutView(APIView):
     def post(self, request):
         logout(request)
         return Response(status.HTTP_200_OK)
+
+
+class GetShapesView(APIView):
+    def get(self, request):
+        shapes = Shape.objects.all()
+        serializer = ShapeSerializer(shapes, many=True)
+        return Response(serializer.data, status.HTTP_200_OK)
 

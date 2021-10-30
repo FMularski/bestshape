@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto&display=swap');
 $theme-color-1-dark: #01a375;
 $theme-color-1: #00FAB4;
 
@@ -14,10 +15,12 @@ div#shapes {
 
     width: 80rem;
     flex-wrap: wrap;
+    margin-top: 2rem;
 
     div.shape {
         width: 30rem;
         margin: 2rem;
+        animation: shape-appear 1s ease;
 
         img {
             -webkit-filter: drop-shadow(5px 5px 5px #222);
@@ -112,4 +115,13 @@ span#hello {
     left: 2rem;
     font-weight: bold;
     color: $theme-color-1-dark;
+    font-family: 'Rightous' sans-serif;
+}
+
+@keyframes shape-appear {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
 }

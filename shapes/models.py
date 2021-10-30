@@ -7,6 +7,7 @@ from django.db.models.signals import post_delete
 class Shape(models.Model):
     name = models.CharField(max_length=200)
     image = models.ImageField(upload_to='shapes')
+    votes = models.PositiveIntegerField(default=0)
 
 
 class User(AbstractUser):

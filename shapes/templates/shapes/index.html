@@ -13,34 +13,7 @@
         <button class="btn btn-danger hoverable">Log Out</button>
         <h1 class="title">Pick your favourite!</h1>
         <div id="shapes" class="flex-center-center">
-            <div class="shape flex-column-center-center">
-                <img src="{% static '/shapes/img/square.png' %}" alt="">
-                <div class="bar-bg">
-                    <div class="bar"></div>
-                    <span class="bar-text">50% voted</span>
-                </div>
-            </div>
-            <div class="shape flex-column-center-center">
-                <img src="{% static '/shapes/img/circle.png' %}" alt="">
-                <div class="bar-bg">
-                    <div class="bar"></div>
-                    <span class="bar-text">50% voted</span>
-                </div>
-            </div>
-            <div class="shape flex-column-center-center">
-                <img src="{% static '/shapes/img/triangle.png' %}" alt="">
-                <div class="bar-bg">
-                    <div class="bar"></div>
-                    <span class="bar-text">50% voted</span>
-                </div>
-            </div>
-            <div class="shape flex-column-center-center">
-                <img src="{% static '/shapes/img/hexagon.png' %}" alt="">
-                <div class="bar-bg">
-                    <div class="bar"></div>
-                    <span class="bar-text">50% voted</span>
-                </div>
-            </div>
+            <i class="far fa-square spinning"></i>
         </div>
     </main>
 
@@ -54,4 +27,5 @@
 
 {% block script %}
     <script src="{% static '/shapes/js/logout.js' %}"></script>
+    <script src="{% static '/shapes/js/load-shapes.js' %}"></script>
 {% endblock %}

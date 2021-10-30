@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&family=Roboto&display=swap");
 main {
   width: 80rem;
   margin: auto;
@@ -11,11 +12,14 @@ div#shapes {
   width: 80rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-top: 2rem;
 }
 
 div#shapes div.shape {
   width: 30rem;
   margin: 2rem;
+  -webkit-animation: shape-appear 1s ease;
+          animation: shape-appear 1s ease;
 }
 
 div#shapes div.shape img {
@@ -112,5 +116,24 @@ span#hello {
   left: 2rem;
   font-weight: bold;
   color: #01a375;
+  font-family: 'Rightous' sans-serif;
+}
+
+@-webkit-keyframes shape-appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes shape-appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=index.css.map */
