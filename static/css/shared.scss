@@ -29,6 +29,7 @@
 
 .spinning {
     animation: spinning 1s ease infinite;
+    background: transparent;
 }
 
 @keyframes spinning {
@@ -51,6 +52,12 @@ header {
     }
 }
 
+.form-title {
+    background: $theme-color-1-dark;
+    color: white;
+    padding: 1rem;
+}
+
 form {
     width: 30rem;
     margin: auto;
@@ -70,4 +77,8 @@ form {
         background-color: $theme-color-1 !important;
         box-shadow: $theme-color-1-dark 3px 3px;
     }
+}
+
+div#form-errors {
+    color: red;
 }

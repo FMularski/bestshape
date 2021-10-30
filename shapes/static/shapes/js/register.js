@@ -5,27 +5,42 @@ const usernameInput = document.querySelector('#id_username');
 const password1Input = document.querySelector('#id_password1');
 const password2Input = document.querySelector('#id_password2');
 const registerBtn = document.querySelector('#register-btn');
+const formErrors = document.querySelector('#form-errors');
 
-registerForm.addEventListener('submit', event => {
-    event.preventDefault();
+async function register() {
     registerBtn.innerHTML = '<i class="fas fa-spinner spinning"></i>';
 
-    fetch('/api/register/', {
+    const response = await fetch('/api/register/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
             'X-CSRFToken': token,
-            'X-Requested-With':'XMLHttpRequest'
         },
         body: JSON.stringify({
             'username': usernameInput.value,
             'password1': password1Input.value,
             'password2': password2Input.value
         })
-    })
-    .then(response => response.json())
-    .then(responseJSON => {
-        registerBtn.innerHTML = 'Register';
-        console.log(responseJSON);
     });
+
+    if (response.status == 200) {
+        location.href = '/';
+    } else {
+        const errors = await response.json();        
+        for(let field in errors) {
+            formErrors.innerHTML += 
+                '<span><b>' + field + ':</b></span>' + 
+                '<p>' + errors[field].join('\n') + '</p>';
+        }
+
+        usernameInput.value = '';
+        password1Input.value = '';
+        password2Input.value = '';
+        registerBtn.innerHTML = 'Try again';
+    }
+}
+
+registerForm.addEventListener('submit', event => {
+    event.preventDefault();
+    register();
 })

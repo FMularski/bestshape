@@ -6,14 +6,12 @@
     <link rel="stylesheet" href="{% static '/shapes/css/register.css' %}">
 {% endblock %}
 
-{% block header %}
-    
-{% endblock %}
 {% block main %}
     <main>
         <form id="register-form">
             {% csrf_token %}
-            <h2>Register</h2>
+            <h2 class="form-title">Register</h2>
+            <div id="form-errors"></div>
             {% for field in form %}
                 {{field.label}}
                 {{field}}
@@ -30,4 +28,10 @@
 
 {% block script %}
     <script src="{% static '/shapes/js/register.js' %}"></script>
+    <script>
+        const alreadyRegBtn = document.querySelector('#already-registered-btn');
+        alreadyRegBtn.addEventListener('click', () => {
+            window.location.href = '/login/';
+        })
+    </script>
 {% endblock %}

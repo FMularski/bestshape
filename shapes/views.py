@@ -10,3 +10,7 @@ class RegisterPageView(TemplateView):
         context = super().get_context_data(**kwargs)
         context['form'] = RegisterForm
         return context
+
+
+class LoginPageView(TemplateView):
+    template_name = 'shapes/login.html'

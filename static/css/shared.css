@@ -40,6 +40,7 @@
 .spinning {
   -webkit-animation: spinning 1s ease infinite;
           animation: spinning 1s ease infinite;
+  background: transparent;
 }
 
 @-webkit-keyframes spinning {
@@ -73,6 +74,12 @@ header h1 {
   font-size: 4rem;
 }
 
+.form-title {
+  background: #01a375;
+  color: white;
+  padding: 1rem;
+}
+
 form {
   width: 30rem;
   margin: auto;
@@ -92,5 +99,9 @@ form button {
   background-color: #00FAB4 !important;
   -webkit-box-shadow: #01a375 3px 3px;
           box-shadow: #01a375 3px 3px;
+}
+
+div#form-errors {
+  color: red;
 }
 /*# sourceMappingURL=shared.css.map */
