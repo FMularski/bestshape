@@ -10,17 +10,18 @@
     <main>
         <form id="login-form">
             {% csrf_token %}
-            <h2>Log In</h2>
-            
+            <h2 class="form-title"><i class="fas fa-user"></i> Log In</h2>
+            <div id="form-errors"></div>
+
             <label for="">Username</label>
-            <input id="id_username" class="form-control" type="text" required> <br>
+            <input id="id_username" class="form-control" name="username" type="text" required>
 
             <label for="">Password</label>
-            <input id="id_password" class="form-control" type="password" required> <br>
+            <input id="id_password" class="form-control" name="password" type="password" required> <br>
 
             <div class="flex-evenly-center">
-                <button id="login-btn" class="btn">Log In</button>
-                <button id="no-account-btn" class="btn">No account?</button>
+                <button id="login-btn" class="btn hoverable">Log In</button>
+                <button id="no-account-btn" class="btn hoverable">No account?</button>
             </div>
         </form>
     </main>

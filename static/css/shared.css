@@ -80,6 +80,10 @@ header h1 {
   padding: 1rem;
 }
 
+.form-title i {
+  background: #01a375;
+}
+
 form {
   width: 30rem;
   margin: auto;
@@ -99,6 +103,16 @@ form button {
   background-color: #00FAB4 !important;
   -webkit-box-shadow: #01a375 3px 3px;
           box-shadow: #01a375 3px 3px;
+}
+
+.hoverable {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.hoverable:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 div#form-errors {

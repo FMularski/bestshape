@@ -10,7 +10,7 @@
     <main>
         <form id="register-form">
             {% csrf_token %}
-            <h2 class="form-title">Register</h2>
+            <h2 class="form-title"><i class="fas fa-user-plus"></i> Register</h2>
             <div id="form-errors"></div>
             {% for field in form %}
                 {{field.label}}
@@ -18,8 +18,8 @@
             {% endfor %}
 
             <div class="flex-evenly-center">
-                <button id="register-btn" class="btn">Register</button>
-                <button id="already-registered-btn" class="btn">Already registered</button>
+                <button id="register-btn" class="btn hoverable">Register</button>
+                <button id="already-registered-btn" class="btn hoverable">Already registered</button>
             </div>
         </form>
     </main>

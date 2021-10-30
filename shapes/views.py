@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import RegisterForm
 
 
@@ -14,3 +15,8 @@ class RegisterPageView(TemplateView):
 
 class LoginPageView(TemplateView):
     template_name = 'shapes/login.html'
+
+
+class IndexPageView(LoginRequiredMixin, TemplateView):
+    template_name = 'shapes/index.html'
+    login_url = '/login/'

@@ -9,6 +9,7 @@ const formErrors = document.querySelector('#form-errors');
 
 async function register() {
     registerBtn.innerHTML = '<i class="fas fa-spinner spinning"></i>';
+    registerBtn.style.pointerEvents = 'none';
 
     const response = await fetch('/api/register/', {
         method: 'POST',
@@ -37,6 +38,7 @@ async function register() {
         password1Input.value = '';
         password2Input.value = '';
         registerBtn.innerHTML = 'Try again';
+        registerBtn.style.pointerEvents = 'all';
     }
 }
 

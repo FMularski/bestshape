@@ -56,6 +56,10 @@ header {
     background: $theme-color-1-dark;
     color: white;
     padding: 1rem;
+
+    i {
+        background: $theme-color-1-dark;
+    }
 }
 
 form {
@@ -76,6 +80,14 @@ form {
         color: white !important;
         background-color: $theme-color-1 !important;
         box-shadow: $theme-color-1-dark 3px 3px;
+    }
+}
+
+.hoverable 
+{
+    transition: all 0.3s ease;
+    &:hover {
+        transform: scale(1.1);
     }
 }
 
