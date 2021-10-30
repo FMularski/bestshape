@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Best Shape | Vote {% endblock %}
+{% block link %}
+    <link rel="stylesheet" href="{% static '/shapes/css/index.css' %}">
+{% endblock %}
+    
+{% block main %}
+    <main>
+        <h1 class="title">Pick your favourite!</h1>
+        <div id="shapes" class="flex-center-center">
+            <div class="shape flex-column-center-center">
+                <img src="{% static '/shapes/img/square.png' %}" alt="">
+                <div class="bar-bg">
+                    <div class="bar"></div>
+                    <span class="bar-text">50% voted</span>
+                </div>
+            </div>
+            <div class="shape flex-column-center-center">
+                <img src="{% static '/shapes/img/circle.png' %}" alt="">
+                <div class="bar-bg">
+                    <div class="bar"></div>
+                    <span class="bar-text">50% voted</span>
+                </div>
+            </div>
+            <div class="shape flex-column-center-center">
+                <img src="{% static '/shapes/img/triangle.png' %}" alt="">
+                <div class="bar-bg">
+                    <div class="bar"></div>
+                    <span class="bar-text">50% voted</span>
+                </div>
+            </div>
+            <div class="shape flex-column-center-center">
+                <img src="{% static '/shapes/img/hexagon.png' %}" alt="">
+                <div class="bar-bg">
+                    <div class="bar"></div>
+                    <span class="bar-text">50% voted</span>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}
+{% block footer%}{% endblock %}
+
+{% block script %}
+{% endblock %}
