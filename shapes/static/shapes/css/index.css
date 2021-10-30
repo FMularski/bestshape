@@ -59,4 +59,44 @@ div#shapes div.shape div.bar-bg span.bar-text {
   font-weight: bold;
   text-shadow: black 1px 1px;
 }
+
+div#dark {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+div#dark.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+div#voting {
+  position: fixed;
+  top: -200%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  width: 20rem;
+  height: 20rem;
+  background: #00FAB4;
+  -webkit-box-shadow: #01a375 5px 5px 4px;
+          box-shadow: #01a375 5px 5px 4px;
+  color: white;
+  border-radius: 1rem;
+  font-size: 2rem;
+}
+
+div#voting.active {
+  top: 20%;
+}
 /*# sourceMappingURL=index.css.map */
