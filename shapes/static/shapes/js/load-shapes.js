@@ -16,8 +16,8 @@ async function loadShapes() {
             '<div class="shape flex-column-center-center">' + 
                 '<img src="' + shape.image + '" alt="">' +
                 '<div class="bar-bg">' + 
-                    '<div class="bar" style="width: ' + shape.votes + '%"></div>' + 
-                    '<span class="bar-text">' + shape.votes + '% voted</span>' + 
+                    '<div class="bar"></div>' + 
+                    '<span class="bar-text"> 0% voted</span>' + 
                 '</div>' + 
             '</div>';
     })
