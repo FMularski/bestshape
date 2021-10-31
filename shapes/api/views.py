@@ -46,7 +46,7 @@ class LogoutView(APIView):
 class GetShapesView(APIView):
     permission_classes = [IsAuthenticated]
     def get(self, request):
-        shapes = Shape.objects.all()
+        shapes = Shape.objects.all().order_by('pk')
         serializer = ShapeSerializer(shapes, many=True)
         return Response(serializer.data, status.HTTP_200_OK)
 
