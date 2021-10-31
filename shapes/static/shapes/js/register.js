@@ -24,10 +24,13 @@ async function register() {
         })
     });
 
-    if (response.status == 200) {
+    console.log(response);
+
+    if (response.status == 201) {
         location.href = '/';
     } else {
         const errors = await response.json();        
+        
         for(let field in errors) {
             formErrors.innerHTML += 
                 '<span><b>' + field + ':</b></span>' + 

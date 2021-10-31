@@ -9,9 +9,10 @@ function updateBar(shapeId) {
     })
     .then(response => response.json())
     .then(ratio => {
+
         const bar = document.querySelector("#bar-" + shapeId);
         const ratioDisplay = document.querySelector('#bar-' + shapeId + '+span');
         bar.style.width = ratio + '%';
-        ratioDisplay.innerText = ratio + '% votes';
+        ratioDisplay.innerText = Math.round(ratio) + '% votes';
     })
 }

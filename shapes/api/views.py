@@ -15,6 +15,7 @@ class RegisterView(APIView):
         form = RegisterForm(data=request.data)
         if form.is_valid():
             user = form.save()
+            login(request, user)
             serializer = UserSerializer(user)
             return Response(serializer.data, status.HTTP_201_CREATED)
         else:
@@ -67,7 +68,7 @@ class GetVotesRatioView(APIView):
     def get(self, request, pk):
         shape = Shape.objects.get(pk=pk)
         shape_votes_count = shape.vote_set.all().count()
-        all_votes_count = Vote.objects.all().count()
+        all_votes_count = Vote.objects.filter(shape__isnull=False).count()
 
         ratio = shape_votes_count / all_votes_count * 100
 
