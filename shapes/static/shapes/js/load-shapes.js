@@ -14,12 +14,22 @@ async function loadShapes() {
     shapes.forEach(shape => {
         shapesContainer.innerHTML += 
             '<div class="shape flex-column-center-center">' + 
-                '<img src="' + shape.image + '" alt="">' +
+                '<img src="' + shape.image + '" shape-id="' + shape.id + '">' +
                 '<div class="bar-bg">' + 
-                    '<div class="bar"></div>' + 
+                    '<div id="bar-' + shape.id + '" class="bar"></div>' + 
                     '<span class="bar-text"> 0% voted</span>' + 
                 '</div>' + 
             '</div>';
+    })
+
+    const shapesImgs = document.querySelectorAll('div.shape img');
+
+    shapesImgs.forEach(shape => {
+        shape.addEventListener('click', () => {
+            vote(shape.getAttribute('shape-id'));
+        });
+
+        updateBar(shape.getAttribute('shape-id'));
     })
 }
 

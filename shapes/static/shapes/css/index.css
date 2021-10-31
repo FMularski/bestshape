@@ -44,6 +44,7 @@ div#shapes div.shape div.bar-bg {
   border-radius: 1rem;
   background: rgba(145, 145, 145, 0.712);
   position: relative;
+  overflow: hidden;
 }
 
 div#shapes div.shape div.bar-bg div.bar {
@@ -51,6 +52,8 @@ div#shapes div.shape div.bar-bg div.bar {
   height: 2rem;
   border-radius: 1rem;
   background: #01a375;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 div#shapes div.shape div.bar-bg span.bar-text {
